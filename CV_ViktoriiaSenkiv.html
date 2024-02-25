@@ -1,0 +1,460 @@
+<!doctype html>
+<html lang="en">
+
+
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Space+Grotesk:wght@300..700&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400..700&display=swap');
+
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+
+  body {
+    margin: 0;
+    padding: 20px;
+    background-color: #e8e8e8;
+    color: #333;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+  }
+
+  .container {
+    max-width: 850px;
+    overflow: hidden;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+  }
+
+  .container .left_Side {
+    position: relative;
+    background-color: #efefef;
+    border-right: 1px solid #c6c6c6;
+    padding: 20px;
+  }
+
+  .profileText {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 20px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  }
+
+
+  .profileText h2 {
+    color: #212121;
+    font-size: 1.5em;
+    text-transform: uppercase;
+    text-align: left;
+    font-weight: 600;
+    line-height: 1.4em;
+    font-family: "Space Grotesk", sans-serif;
+  }
+
+  .profileText h2 span {
+    font-family: "Space Grotesk", sans-serif;
+    font-size: 0.8em;
+    font-weight: 200;
+  }
+
+  .contactInfo {
+    padding-top: 40px;
+  }
+
+  .title {
+    color: #212121;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 1px;
+    margin-bottom: 20px;
+    font-family: "Space Grotesk", sans-serif;
+  }
+
+  .contactInfo ul {
+    position: relative;
+  }
+
+  .contactInfo ul li {
+    list-style: none;
+    position: relative;
+    margin: 10px 0;
+  }
+
+  .contactInfo ul li .icon {
+    display: inline-block;
+    width: 30px;
+    font-size: 18px;
+    color: #212121;
+  }
+
+  .contactInfo ul li span {
+    color: #212121;
+    font-weight: 300;
+  }
+
+  .contactInfo.education li {
+    margin-bottom: 15px;
+  }
+
+  .contactInfo.education h5 {
+    color: #212121;
+    font-weight: 500;
+  }
+
+  .contactInfo.education h4:nth-child(2) {
+    color: #212121;
+    font-weight: 500;
+  }
+
+  .contactInfo.education h4 {
+    color: #212121;
+    font-weight: 300;
+  }
+
+  .contactInfo.language .percent {
+    position: relative;
+    width: 100%;
+    height: 6px;
+    background-color: #081921;
+    display: block;
+    margin-top: 5px;
+  }
+
+  .contactInfo.language .percent div {
+    position: relative;
+    top: 0;
+    left: 0;
+    height: 100%;
+    background-color: #03a9f4;
+  }
+
+  .container .right_Side {
+    position: relative;
+    background-color: #fff;
+    padding: 40px;
+  }
+
+  .about {
+    margin-bottom: 50px;
+  }
+
+  .about:last-child {
+    margin-bottom: 0;
+  }
+
+  .title2 {
+    color: #003147;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+    font-family: "Space Grotesk", SansSerif;
+  }
+
+  p {
+    color: #081921;
+  }
+
+  b {
+    font-weight: 600;
+  }
+
+  .about .box {
+    display: flex;
+    flex-direction: row;
+    margin: 20px 0;
+  }
+
+  .about .box .year_company {
+    min-width: 150px;
+  }
+
+  .about .year_company h5 {
+    text-transform: uppercase;
+    color: #848c90;
+    font-weight: 600;
+  }
+
+  .about .box .text h4 {
+    text-transform: uppercase;
+    color: #2a7da2;
+    font-size: 16px;
+  }
+
+  .skills .box {
+    position: relative;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 150px 1fr;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .skills .box h4 {
+    text-transform: uppercase;
+    color: #848c90;
+    font-weight: 500;
+  }
+
+  .skills .box .percent {
+    position: relative;
+    width: 100%;
+    height: 10px;
+    background-color: #f0f0f0;
+  }
+
+  .skills .box .percent div {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    background-color: #212121;
+  }
+
+  .interest ul {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .interest ul li {
+    list-style: none;
+    color: black;
+    font-weight: 500;
+    margin: 10px 0;
+  }
+
+  .interest ul li .fa {
+    color: #212121;
+    font-size: 18px;
+    width: 20px;
+  }
+
+  @media (max-width: 1000px) {
+    .container {
+      margin: 10px;
+      grid-template-columns: repeat(1, 1fr);
+    }
+
+    .interest ul {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  @media (max-width: 600px) {
+    .about .box {
+      flex-direction: column;
+    }
+
+    .about .box .year_company {
+      margin-bottom: 5px;
+    }
+
+    .interest ul {
+      grid-template-columns: repeat(1, 1fr);
+    }
+
+    .skills .box {
+      grid-template-columns: repeat(1, 1fr);
+    }
+  }
+
+  table {
+    width: 100%;
+    border-spacing: 0;
+  }
+
+  td {
+    padding: 8px;
+    text-align: left;
+    vertical-align: top;
+    border-bottom: 1px solid #cacaca;
+  }
+</style>
+
+
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+    content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css"
+    integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <link rel="stylesheet" type="text/css" href="css/data.css">
+</head>
+
+<body>
+  <div class="container">
+    <div class="left_Side">
+      <div class="profileText">
+        <br>
+        <h2>Viktoriia Senkiv <br><span>C++ Developer</span> </h2>
+      </div>
+
+      <div class="contactInfo">
+        <h3 class="title">🪪 Contact Info</h3>
+        <ul>
+          <li>
+            <span class="icon"><i class="fa fa-envelope" aria-hidden="true"></i></span>
+            <span class="text"><a href="mailto:vika.senkiv@urk.net">vika.senkiv@urk.net</a></span>
+          </li>
+          <li>
+            <span class="icon"><i class="fa fa-linkedin" aria-hidden="true"></i></span>
+            <span class="text"><a
+                href="https://www.linkedin.com/in/viktoriia-senkiv-65a61b220?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app"
+                target="_blank" rel="noopener noreferrer">viktoriia-senkiv</a></span>
+          </li>
+          <li>
+            <span class="icon"><i class="fa fa-globe" aria-hidden="true"></i></span>
+            <span class="text">Ukraine</span>
+          </li>
+        </ul>
+      </div>
+      <div class="contactInfo education">
+        <h3 class="title">📖 Education</h3>
+        <ul>
+          <li>
+            <b>MS in Computer Science (2020-2022)</b>
+
+            <p>Vasyl Stefanyk Precarpathian National University, Faculty of Mathematics
+              and Computer Science</p>
+            <p style="color: rgb(149, 149, 149);">Master's degree in Computer Science
+              with Honor. </p>
+          </li>
+          <li>
+            <b>BS in Mathematics (2016-2020)</b>
+            <p>Vasyl Stefanyk Precarpathian National University, Faculty of Mathematics
+              and Computer Science</p>
+            <p style="color: rgb(149, 149, 149);">Bachelor's degree in Mathematics with Honor. Mathematician
+            </p>
+          </li>
+        </ul>
+      </div>
+      <div class="contactInfo language">
+        <h3 class="title">💂 Languages</h3>
+        <ul>
+          <li>
+            <span class="text">English (Upper intermediate)</span>
+        </ul>
+        <ul>
+          <li>
+            <span class=" text">Ukraine (Native)
+            </span>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="right_Side">
+      <div class="about">
+        <h2 class="title2">🤓 Profile</h2>
+        <p>I am a Junior C++ Developer with more than 2 years of experience in the IT industry.
+          I have a solid background in a number of technologies on Windows and Linux
+          platforms. I have a considerable expertise in network technologies, particularly
+          protocols and sockets.<br>
+          I am a dynamic, detail-oriented, and analytical IT professional. I can offer accuracy,
+          problem-solving skills, and a deep passion for work.</p>
+      </div>
+
+      <div class="about">
+        <h2 class="title2">🚀 Experience</h2>
+        <div class="year_company">
+          <h5>2020 - Present</h5>
+          <h5>A US banking company</h5>
+        </div>
+        <!-- Customer: A US banking company -->
+        <p>The challenge was to develop the application for a leading
+          international financial services provider. The customer approached our team for help
+          on improving accessibility and flexibility of the existing solution. The solution was
+          used for storing hundreds of statement templates and performing tax-related
+          calculations.</p>
+        <p><b>Team size:</b> 113 team members <br>
+          <b>Involvement duration:</b> 2 years and 8 months<br>
+          <b>Role:</b> Junior C++ Developer<br>
+        </p>
+        <br>
+        <p>
+          <b>Responsibilities:</b>
+        <ul>
+          <li>Understood the requirements.</li>
+          <li>Designed and developed new features.</li>
+          <li>Designed the UI components and covered them with unit tests.</li>
+          <li>Provided the system and application support.</li>
+          <li>Performed log analysis and troubleshot issues.</li>
+          <li>Designed and developed new features.</li>
+          <li>Enhanced the existing features mentioned by the customer.</li>
+          <li>Participated in status update and planning meetings.</li>
+        </ul>
+        </p>
+      </div>
+
+      <div class="about skills">
+        <h2 class="title2">🛠️ Professionals skills</h2>
+        <table>
+          <tr>
+            <td>Languages standards</td>
+            <td>C, C++98, C++03,
+              C++11, C++14, C++17, C++20</td>
+          </tr>
+          <tr>
+            <td>Compiler and build systems</td>
+            <td>GNU CC, MS Visual C++, CMake, Autotools</td>
+          </tr>
+          <tr>
+            <td>Windows libraries, interfaces, and platforms</td>
+            <td>CRT, WinAPI, MFC, WinSock2, OLE DB, C++
+              Concurrency Runtime</td>
+          </tr>
+          <tr>
+            <td>Common libraries and interfaces</td>
+            <td>STL, Qt, Boost, OCI, OpenSSL, cUrl, PuTTY</td>
+          </tr>
+          <tr>
+            <td>Unit testing</td>
+            <td>Google Test, Google Mock</td>
+          </tr>
+          <tr>
+            <td>Technologies</td>
+            <td>Windows Services, Windows Shell</td>
+          </tr>
+          <tr>
+            <td>Network</td>
+            <td>Web Services, TCP/IP Stack, Sockets, Pipes</td>
+          </tr>
+          <tr>
+            <td>Databases</td>
+            <td>Mysql, Sqlite</td>
+          </tr>
+          <tr>
+            <td>Tools</td>
+            <td>GDB, VS Remote Debugger, GitHub, GitLab, SonarQube, Jenkins</td>
+          </tr>
+        </table>
+      </div>
+      <div class="about interest">
+        <h2 class="title2">Interests</h2>
+        <ul>
+          <li><i class="fa fa-book" aria-hidden="true"></i> Reading</li>
+          <li><i class="fa fa-gamepad" aria-hidden="true"></i> Gaming</li>
+          <li><i class="fa fa-cutlery" aria-hidden="true"></i> Cooking</li>
+          <li><i class="fa fa-microphone" aria-hidden="true"></i> Singing</li>
+        </ul>
+      </div>
+    </div>
+</body>
+
+</html>
