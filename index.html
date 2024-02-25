@@ -3,471 +3,501 @@
 
 
 <style>
-  @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Space+Grotesk:wght@300..700&display=swap');
-  @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400..700&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Space+Grotesk:wght@300..700&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400..700&display=swap');
 
-  * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: "Poppins", sans-serif;
-    font-weight: 400;
-    font-style: normal;
-  }
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Poppins", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+    }
 
-  body {
-    margin: 0;
-    padding: 20px;
-    background-color: #e8e8e8;
-    color: #333;
-    align-items: center;
-    justify-content: center;
-    display: flex;
-  }
+    body {
+        margin: 0;
+        padding: 20px;
+        background-color: #e8e8e8;
+        color: #333;
+        align-items: center;
+        justify-content: center;
+        display: flex;
+    }
 
-  .container {
-    max-width: 850px;
-    overflow: hidden;
-    background-color: #fff;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-
-    position: relative;
-    display: grid;
-    grid-template-columns: 1fr 2fr;
-  }
-
-  .container .left_Side {
-    position: relative;
-    background-color: #efefef;
-    border-right: 1px solid #c6c6c6;
-    padding: 20px;
-  }
-
-  .profileText {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    padding-bottom: 20px;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-    margin-top: 20px;
-  }
-
-
-  .profileText h2 {
-    color: #212121;
-    font-size: 1.5em;
-    text-transform: uppercase;
-    text-align: left;
-    font-weight: 600;
-    line-height: 1.4em;
-    font-family: "Space Grotesk", sans-serif;
-  }
-
-  .profileText h2 span {
-    font-family: "Space Grotesk", sans-serif;
-    font-size: 0.8em;
-    font-weight: 200;
-  }
-
-  .contactInfo {
-    padding-top: 40px;
-  }
-
-  .title {
-    color: #212121;
-    text-transform: uppercase;
-    font-weight: 600;
-    letter-spacing: 1px;
-    margin-bottom: 20px;
-    font-family: "Space Grotesk", sans-serif;
-  }
-
-  .contactInfo ul {
-    position: relative;
-  }
-
-  .contactInfo ul li {
-    list-style: none;
-    position: relative;
-    margin: 10px 0;
-  }
-
-  .contactInfo ul li .icon {
-    display: inline-block;
-    width: 30px;
-    font-size: 18px;
-    color: #212121;
-  }
-
-  .contactInfo ul li span {
-    color: #212121;
-    font-weight: 300;
-  }
-
-  .contactInfo.education li {
-    margin-bottom: 15px;
-  }
-
-  .contactInfo.education h5 {
-    color: #212121;
-    font-weight: 500;
-  }
-
-  .contactInfo.education h4:nth-child(2) {
-    color: #212121;
-    font-weight: 500;
-  }
-
-  .contactInfo.education h4 {
-    color: #212121;
-    font-weight: 300;
-  }
-
-  .container .right_Side {
-    position: relative;
-    background-color: #fff;
-    padding: 40px;
-  }
-
-  .about {
-    margin-bottom: 50px;
-  }
-
-  .about:last-child {
-    margin-bottom: 0;
-  }
-
-  .title2 {
-    color: #003147;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    margin-bottom: 10px;
-    font-family: "Space Grotesk", SansSerif;
-    font-weight: 800;
-  }
-
-  p {
-    color: #081921;
-  }
-
-  b {
-    font-weight: 600;
-  }
-
-  .about .year_company h5 {
-    text-transform: uppercase;
-    color: #848c90;
-    font-weight: 600;
-  }
-
-  .about .case {
-    margin-top: 20px;
-    border-bottom: 1px solid #c6c6c6;
-    padding-bottom: 20px;
-  }
-
-  .interest ul {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-  }
-
-  .interest ul li {
-    list-style: none;
-    color: black;
-    font-weight: 500;
-    margin: 10px 0;
-  }
-
-  .interest ul li .fa {
-    color: #212121;
-    font-size: 18px;
-    width: 20px;
-  }
-
-  @media (max-width: 1000px) {
     .container {
-      margin: 10px;
-      grid-template-columns: repeat(1, 1fr);
+        width: 850px;
+        overflow: hidden;
+        background-color: #fff;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+
+        position: relative;
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+    }
+
+    .container .left_Side {
+        position: relative;
+        background-color: #efefef;
+        border-right: 1px solid #c6c6c6;
+        padding: 20px;
+    }
+
+    .profileText {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        padding-bottom: 20px;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+        margin-top: 20px;
+    }
+
+
+    .profileText h2 {
+        color: #212121;
+        font-size: 1.5em;
+        text-transform: uppercase;
+        text-align: left;
+        font-weight: 600;
+        line-height: 1.4em;
+        font-family: "Space Grotesk", sans-serif;
+    }
+
+    .profileText h2 span {
+        font-family: "Space Grotesk", sans-serif;
+        font-size: 0.8em;
+        font-weight: 200;
+    }
+
+    .contactInfo {
+        padding-top: 40px;
+    }
+
+    .title {
+        color: #212121;
+        text-transform: uppercase;
+        font-weight: 600;
+        letter-spacing: 1px;
+        margin-bottom: 20px;
+        font-family: "Space Grotesk", sans-serif;
+    }
+
+    .contactInfo ul {
+        position: relative;
+    }
+
+    .contactInfo ul li {
+        list-style: none;
+        position: relative;
+        margin: 10px 0;
+    }
+
+    .contactInfo ul li .icon {
+        display: inline-block;
+        width: 30px;
+        font-size: 18px;
+        color: #212121;
+    }
+
+    .contactInfo ul li span {
+        color: #212121;
+        font-weight: 300;
+    }
+
+    .contactInfo.education li {
+        margin-bottom: 15px;
+    }
+
+    .contactInfo.education h5 {
+        color: #212121;
+        font-weight: 500;
+    }
+
+    .contactInfo.education h4:nth-child(2) {
+        color: #212121;
+        font-weight: 500;
+    }
+
+    .contactInfo.education h4 {
+        color: #212121;
+        font-weight: 300;
+    }
+
+    .container .right_Side {
+        position: relative;
+        background-color: #fff;
+        padding: 40px;
+    }
+
+    .about {
+        margin-bottom: 50px;
+    }
+
+    .about:last-child {
+        margin-bottom: 0;
+    }
+
+    .title2 {
+        color: #003147;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        margin-bottom: 10px;
+        font-family: "Space Grotesk", SansSerif;
+        font-weight: 800;
+    }
+
+    p {
+        color: #081921;
+    }
+
+    b {
+        font-weight: 600;
+    }
+
+    .about .year_company h5 {
+        text-transform: uppercase;
+        color: #848c90;
+        font-weight: 600;
+    }
+
+    .about .case {
+        margin-top: 20px;
+        border-bottom: 1px solid #c6c6c6;
+        padding-bottom: 20px;
     }
 
     .interest ul {
-      grid-template-columns: repeat(2, 1fr);
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
     }
-  }
 
-  @media (max-width: 600px) {
-    .interest ul {
-      grid-template-columns: repeat(1, 1fr);
+    .interest ul li {
+        list-style: none;
+        color: black;
+        font-weight: 500;
+        margin: 10px 0;
     }
-  }
 
-  table {
-    width: 100%;
-    border-spacing: 0;
-    page-break-inside: avoid;
-  }
+    .interest ul li .fa {
+        color: #212121;
+        font-size: 18px;
+        width: 20px;
+    }
 
-  td {
-    padding: 8px;
-    text-align: left;
-    vertical-align: top;
-    border-bottom: 1px solid #cacaca;
-  }
+    @media (max-width: 850px) {
+        .container {
+            margin: 10px;
+            grid-template-columns: repeat(1, 1fr);
+        }
 
-  .btn {
-    background-color: #007bff;
-    color: #fff;
-    text-transform: uppercase;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 5px;
-    text-decoration: none;
-    cursor: pointer;
-    font-size: 16px;
-    position: fixed;
-    top: 20px;
-    right: 40px;
-    z-index: 999;
-  }
+        .interest ul {
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
 
-  .btn:hover {
-    background-color: #006bdd;
-  }
+    @media (max-width: 500px) {
+        .interest ul {
+            grid-template-columns: repeat(1, 1fr);
+        }
 
-  .btn i {
-    margin-right: 5px;
-  }
+        .container .left_Side {
+            border: none;
+        }
+    }
+
+    table {
+        width: 100%;
+        border-spacing: 0;
+        page-break-inside: avoid;
+    }
+
+    td {
+        padding: 8px;
+        text-align: left;
+        vertical-align: top;
+        border-bottom: 1px solid #cacaca;
+    }
+
+    .btn {
+        background-color: #007bff;
+        color: #fff;
+        text-transform: uppercase;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 5px;
+        text-decoration: none;
+        cursor: pointer;
+        font-size: 16px;
+        position: fixed;
+        top: 20px;
+        right: 40px;
+        z-index: 999;
+    }
+
+    .btn:hover {
+        background-color: #006bdd;
+    }
+
+    .btn i {
+        margin-right: 5px;
+    }
 </style>
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport"
-    content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <script src="https://kit.fontawesome.com/bd8e655223.js" crossorigin="anonymous"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://kit.fontawesome.com/bd8e655223.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
 
-  <a href="https://github.com/SenkivViktoriia/SenkivViktoriia.github.io/raw/main/Viktoriia_Senkiv_CV.pdf" class="btn"><i class="fa fa-download"></i> Download PDF</a>
+    <a href="#" class="btn" onclick="downloadPDF()"><i class="fa fa-download"></i> Download PDF</a>
 
-  <div id="pdfBody" class="container no-break">
-    <div class="left_Side">
-      <div class="profileText">
-        <h2>Viktoriia Senkiv <br><span>C++ Developer</span> </h2>
-      </div>
+    <div id="pdfBody" class="container no-break">
+        <div class="left_Side">
+            <div class="profileText">
+                <h2>Viktoriia Senkiv <br><span>C++ Developer</span> </h2>
+            </div>
 
-      <div class="contactInfo">
-        <h3 class="title">Contact Info</h3>
-        <ul>
-          <li>
-            <span class="icon"><i class="fa fa-envelope" aria-hidden="true"></i></span>
-            <span class="text"><a href="mailto:vika.senkiv@urk.net">vika.senkiv@urk.net</a></span>
-          </li>
-          <li>
-            <span class="icon"><i class="fa fa-linkedin" aria-hidden="true"></i></span>
-            <span class="text"><a
-                href="https://www.linkedin.com/in/viktoriia-senkiv-65a61b220?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app"
-                target="_blank" rel="noopener noreferrer">viktoriia-senkiv</a></span>
-          </li>
-          <li>
-            <span class="icon"><i class="fa fa-globe" aria-hidden="true"></i></span>
-            <span class="text">Ukraine</span>
-          </li>
-        </ul>
-      </div>
-      <div class="contactInfo education">
-        <h3 class="title">Education</h3>
-        <ul>
-          <li>
-            <b>MS in Computer Science (2020-2022)</b>
+            <div class="contactInfo">
+                <h3 class="title">Contact Info</h3>
+                <ul>
+                    <li>
+                        <span class="icon"><i class="fa fa-envelope" aria-hidden="true"></i></span>
+                        <span class="text"><a href="mailto:vika.senkiv@urk.net">vika.senkiv@urk.net</a></span>
+                    </li>
+                    <li>
+                        <span class="icon"><i class="fa fa-linkedin" aria-hidden="true"></i></span>
+                        <span class="text"><a
+                                href="https://www.linkedin.com/in/viktoriia-senkiv-65a61b220?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app"
+                                target="_blank" rel="noopener noreferrer">viktoriia-senkiv</a></span>
+                    </li>
+                    <li>
+                        <span class="icon"><i class="fa fa-globe" aria-hidden="true"></i></span>
+                        <span class="text">Ukraine</span>
+                    </li>
+                </ul>
+            </div>
+            <div class="contactInfo education">
+                <h3 class="title">Education</h3>
+                <ul>
+                    <li>
+                        <b>MS in Computer Science (2020-2022)</b>
 
-            <p>Vasyl Stefanyk Precarpathian National University, Faculty of Mathematics
-              and Computer Science</p>
-            <p style="color: rgb(149, 149, 149);">Master's degree in Computer Science
-              with Honor. </p>
-          </li>
-          <li>
-            <b>BS in Mathematics (2016-2020)</b>
-            <p>Vasyl Stefanyk Precarpathian National University, Faculty of Mathematics
-              and Computer Science</p>
-            <p style="color: rgb(149, 149, 149);">Bachelor's degree in Mathematics with Honor. Mathematician
-            </p>
-          </li>
-        </ul>
-      </div>
+                        <p>Vasyl Stefanyk Precarpathian National University, Faculty of Mathematics
+                            and Computer Science</p>
+                        <p style="color: rgb(149, 149, 149);">Master's degree in Computer Science
+                            with Honor. </p>
+                    </li>
+                    <li>
+                        <b>BS in Mathematics (2016-2020)</b>
+                        <p>Vasyl Stefanyk Precarpathian National University, Faculty of Mathematics
+                            and Computer Science</p>
+                        <p style="color: rgb(149, 149, 149);">Bachelor's degree in Mathematics with Honor. Mathematician
+                        </p>
+                    </li>
+                </ul>
+            </div>
 
-      <div class="contactInfo language">
-        <h3 class="title">Cources</h3>
-        <ul>
-          <li>Introduction to Databases for Back-End Development, 9FYAGA7854JW, Coursera, 2023.</li>
-          <li>Basics of C++ Development, 2ZNHXUH6QEJF, Coursera, 2020</li>
-          <li>Basics of C++ Development, VF2FHPPJD9AZ, Coursera, 2020.</li>
-        </ul>
-      </div>
+            <div class="contactInfo language">
+                <h3 class="title">Cources</h3>
+                <ul>
+                    <li>Introduction to Databases for Back-End Development, 9FYAGA7854JW, Coursera, 2023.</li>
+                    <li>Basics of C++ Development, 2ZNHXUH6QEJF, Coursera, 2020</li>
+                    <li>Basics of C++ Development, VF2FHPPJD9AZ, Coursera, 2020.</li>
+                </ul>
+            </div>
 
-      <div class="contactInfo language">
-        <h3 class="title">Languages</h3>
-        <ul>
-          <li>English (Upper intermediate)
-          <li>Ukraine (Native)</li>
-        </ul>
-      </div>
+            <div class="contactInfo language">
+                <h3 class="title">Languages</h3>
+                <ul>
+                    <li>English (Upper intermediate)
+                    <li>Ukraine (Native)</li>
+                </ul>
+            </div>
 
-    </div>
-    <div class="right_Side">
-      <div class="about">
-        <h2 class="title2">👩🏻‍💼 Profile</h2>
-        <p>I am a Junior C++ Developer with more than 3 years of experience in the IT industry.
-          I have a solid background in a number of technologies on Windows and Linux
-          platforms. I have a considerable expertise in network technologies, particularly
-          protocols and sockets.<br>
-          I am a dynamic, detail-oriented, and analytical IT professional. I can offer accuracy,
-          problem-solving skills, and a deep passion for work.</p>
-      </div>
+        </div>
+        <div class="right_Side">
+            <div class="about">
+                <h2 class="title2">👩🏻‍💼 Profile</h2>
+                <p>I am a Junior C++ Developer with more than 3 years of experience in the IT industry.
+                    I have a solid background in a number of technologies on Windows and Linux
+                    platforms. I have a considerable expertise in network technologies, particularly
+                    protocols and sockets.<br>
+                    I am a dynamic, detail-oriented, and analytical IT professional. I can offer accuracy,
+                    problem-solving skills, and a deep passion for work.</p>
+            </div>
 
-      <div class="about">
-        <h2 class="title2">🚀 Experience</h2>
-        <div class="case">
-          <div class="year_company">
-            <h5>2023 - Present</h5>
-            <h5>A US banking company</h5>
-          </div>
-          <p>Engaged in developing an administrative API service tasked with overseeing customer onboarding, delivering
-            authentication services tailored for non-Java clients, and administering user policies and tenant mappings.
-            This project was built using Java and Spring Boot, with a focus on maintaining high-quality code through
-            extensive unit and end-to-end testing.
-            <br>
-            <b>Role:</b> Java Developer<br>
-          </p>
+            <div class="about">
+                <h2 class="title2">🚀 Experience</h2>
+                <div class="case">
+                    <div class="year_company">
+                        <h5>2023 - Present</h5>
+                        <h5>A US banking company</h5>
+                    </div>
+                    <p>Engaged in developing an administrative API service tasked with overseeing customer onboarding,
+                        delivering
+                        authentication services tailored for non-Java clients, and administering user policies and
+                        tenant mappings.
+                        This project was built using Java and Spring Boot, with a focus on maintaining high-quality code
+                        through
+                        extensive unit and end-to-end testing.
+                        <br>
+                        <b>Role:</b> Java Developer<br>
+                    </p>
+                </div>
+
+                <div class="case">
+                    <div class="year_company">
+                        <h5>2020 - Present</h5>
+                        <h5>A US banking company</h5>
+                    </div>
+                    <p>This is big project with a lot of of teams on client and our side. The work has included a lot of
+                        communication with international developers, resolving client issue in short time, great
+                        understanding with
+                        existing code. <br>
+                        The challenge was to develop the application for a leading
+                        international financial services provider. The customer approached our team for help
+                        on improving accessibility and flexibility of the existing solution. The solution was
+                        used for storing hundreds of statement templates and performing tax-related
+                        calculations.</p>
+                    <p><b>Team size:</b> 113 team members <br>
+                        <b>Involvement duration:</b> 3 years and 8 months<br>
+                        <b>Role:</b> Junior C++ Developer<br>
+                    </p>
+                    <br>
+                    <p>
+                        <b>Responsibilities:</b>
+                    <ul>
+                        <li>Understood the requirements.</li>
+                        <li>Designed and developed new features.</li>
+                        <li>Designed the UI components and covered them with unit tests.</li>
+                        <li>Provided the system and application support.</li>
+                        <li>Performed log analysis and troubleshot issues.</li>
+                        <li>Designed and developed new features.</li>
+                        <li>Enhanced the existing features mentioned by the customer.</li>
+                        <li>Participated in status update and planning meetings.</li>
+                    </ul>
+                    </p>
+                </div>
+
+                <div class="case">
+                    <div class="year_company">
+                        <h5>2022</h5>
+                        <h5>Company interal project</h5>
+                    </div>
+                    <p>Successfully developed a service application capable of tracking Windows processes and
+                        transmitting
+                        information through WinAPI named pipes to a user interface (UI). A key feature of this project
+                        was its
+                        ability to write Python plugins and seamlessly integrate them into C++ code.
+                    </p>
+                </div>
+
+            </div>
+
+            <div class="about skills">
+                <h2 class="title2">🛠️ Professionals skills</h2>
+                <table>
+                    <tr>
+                        <td>Languages standards</td>
+                        <td>C, C++98, C++03,
+                            C++11, C++14, C++17, C++20, Java</td>
+                    </tr>
+                    <tr>
+                        <td>Compiler and build systems</td>
+                        <td>GNU CC, MS Visual C++, CMake, Autotools</td>
+                    </tr>
+                    <tr>
+                        <td>Windows libraries, interfaces, and platforms</td>
+                        <td>CRT, WinAPI, MFC, WinSock2, OLE DB, C++
+                            Concurrency Runtime</td>
+                    </tr>
+                    <tr>
+                        <td>Common libraries and frameworks</td>
+                        <td>STL, Qt, Boost, OCI, OpenSSL, cUrl, PuTTY, Spring Boot, Swagger</td>
+                    </tr>
+                    <tr>
+                        <td>Testing</td>
+                        <td>Google Test, Google Mock, JUnit, Soap UI</td>
+                    </tr>
+                    <tr>
+                        <td>Technologies</td>
+                        <td>Windows Services, Windows Shell</td>
+                    </tr>
+                    <tr>
+                        <td>Network</td>
+                        <td>Web Services, TCP/IP Stack, Sockets, Pipes</td>
+                    </tr>
+                    <tr>
+                        <td>Databases</td>
+                        <td>Mysql, Sqlite</td>
+                    </tr>
+                    <tr>
+                        <td>Tools</td>
+                        <td>GDB, VS Remote Debugger, GitHub, GitLab, SonarQube, Jenkins, Fiddler, WinSCP, Putty, Intelij
+                            Idea,
+                            VisualStudio, Eclipse</td>
+                    </tr>
+                </table>
+            </div>
+            <div class="about interest">
+                <h2 class="title2">Interests</h2>
+                <ul>
+                    <li><i class="fa-solid fa-book" aria-hidden="true"></i> Reading</li>
+                    <li><i class="fa-solid fa-person-hiking" aria-hidden="true"></i> Hiking</li>
+                    <li><i class="fa-solid fa-microphone" aria-hidden="true"></i> Singing</li>
+                </ul>
+            </div>
         </div>
 
-        <div class="case">
-          <div class="year_company">
-            <h5>2020 - Present</h5>
-            <h5>A US banking company</h5>
-          </div>
-          <p>This is big project with a lot of of teams on client and our side. The work has included a lot of
-            communication with international developers, resolving client issue in short time, great understanding with
-            existing code. <br>
-            The challenge was to develop the application for a leading
-            international financial services provider. The customer approached our team for help
-            on improving accessibility and flexibility of the existing solution. The solution was
-            used for storing hundreds of statement templates and performing tax-related
-            calculations.</p>
-          <p><b>Team size:</b> 113 team members <br>
-            <b>Involvement duration:</b> 3 years and 8 months<br>
-            <b>Role:</b> Junior C++ Developer<br>
-          </p>
-          <br>
-          <p>
-            <b>Responsibilities:</b>
-          <ul>
-            <li>Understood the requirements.</li>
-            <li>Designed and developed new features.</li>
-            <li>Designed the UI components and covered them with unit tests.</li>
-            <li>Provided the system and application support.</li>
-            <li>Performed log analysis and troubleshot issues.</li>
-            <li>Designed and developed new features.</li>
-            <li>Enhanced the existing features mentioned by the customer.</li>
-            <li>Participated in status update and planning meetings.</li>
-          </ul>
-          </p>
-        </div>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/jspdf-html2canvas@latest/dist/jspdf-html2canvas.min.js"></script>
 
-        <div class="case">
-          <div class="year_company">
-            <h5>2022</h5>
-            <h5>Company interal project</h5>
-          </div>
-          <p>Successfully developed a service application capable of tracking Windows processes and transmitting
-            information through WinAPI named pipes to a user interface (UI). A key feature of this project was its
-            ability to write Python plugins and seamlessly integrate them into C++ code.
-          </p>
-        </div>
+        <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.3/html2pdf.bundle.min.js"
+            integrity="sha512-YcsIPGdhPK4P/uRW6/sruonlYj+Q7UHWeKfTAkBW+g83NKM+jMJFJ4iAPfSnVp7BKD4dKMHmVSvICUbE/V1sSw=="
+            crossorigin="anonymous" referrerpolicy="no-referrer"></script> -->
 
-      </div>
+        <script type="text/javascript">
 
-      <div class="about skills">
-        <h2 class="title2">🛠️ Professionals skills</h2>
-        <table>
-          <tr>
-            <td>Languages standards</td>
-            <td>C, C++98, C++03,
-              C++11, C++14, C++17, C++20, Java</td>
-          </tr>
-          <tr>
-            <td>Compiler and build systems</td>
-            <td>GNU CC, MS Visual C++, CMake, Autotools</td>
-          </tr>
-          <tr>
-            <td>Windows libraries, interfaces, and platforms</td>
-            <td>CRT, WinAPI, MFC, WinSock2, OLE DB, C++
-              Concurrency Runtime</td>
-          </tr>
-          <tr>
-            <td>Common libraries and frameworks</td>
-            <td>STL, Qt, Boost, OCI, OpenSSL, cUrl, PuTTY, Spring Boot, Swagger</td>
-          </tr>
-          <tr>
-            <td>Testing</td>
-            <td>Google Test, Google Mock, JUnit, Soap UI</td>
-          </tr>
-          <tr>
-            <td>Technologies</td>
-            <td>Windows Services, Windows Shell</td>
-          </tr>
-          <tr>
-            <td>Network</td>
-            <td>Web Services, TCP/IP Stack, Sockets, Pipes</td>
-          </tr>
-          <tr>
-            <td>Databases</td>
-            <td>Mysql, Sqlite</td>
-          </tr>
-          <tr>
-            <td>Tools</td>
-            <td>GDB, VS Remote Debugger, GitHub, GitLab, SonarQube, Jenkins, Fiddler, WinSCP, Putty, Intelij Idea,
-              VisualStudio, Eclipse</td>
-          </tr>
-        </table>
-      </div>
-      <div class="about interest">
-        <h2 class="title2">Interests</h2>
-        <ul>
-          <li><i class="fa-solid fa-book" aria-hidden="true"></i> Reading</li>
-          <li><i class="fa-solid fa-person-hiking" aria-hidden="true"></i> Hiking</li>
-          <li><i class="fa-solid fa-microphone" aria-hidden="true"></i> Singing</li>
-        </ul>
-      </div>
-    </div>
+            function downloadPDF() {
+                let pdfContainer = document.getElementById('pdfBody');
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/jspdf-html2canvas@latest/dist/jspdf-html2canvas.min.js"></script>
+                /*   var opt = {
+                      margin: 1,
+                      filename: 'Viktoriia_Senkiv_CV.pdf',
+                      // image: { type: 'jpeg', quality: 0.98 },
+                      html2canvas: { scale: 2 },
+                      pagebreak: {
+                          mode: 'avoid-all'
+                      },
+                      jsPDF: { unit: 'px', format: [850, 2835], orientation: 'portrait' }
+                  };
+  
+                  window.html2pdf().set(opt).from(pdfContainer).save(); */
 
-    <script type="text/javascript">
+                window.html2PDF(pdfContainer, {
+                    jsPDF: {
+                        unit: 'px',
+                        format: [850, 2835],
+                    },
+                    html2canvas: {
+                        windowWidth: 1000,
+                        // width: 850,
+                        // height: 2835
+                    },
+                    // imageType: 'image/jpeg',
+                    success: function (pdf) {
+                        pdf.save('Viktoriia_Senkiv_CV.pdf');
+                    }
+                });
 
-      function downloadPDF() {
-        let page = document.getElementById('pdfBody');
-        window.html2PDF(page, {
-          jsPDF: {
-            unit: 'px',
-            format: [850, 2000],
-          },
-          // html2canvas: {
-          //   width: 1000,
-          //   height: 2000
-          // },
-          imageType: 'image/jpeg',
-          success: function (pdf) {
-            pdf.save('Viktoriia_Senkiv_CV.pdf');
-          }
-        });
-
-      }
-    </script>
+            }
+        </script>
 
 </body>
 
