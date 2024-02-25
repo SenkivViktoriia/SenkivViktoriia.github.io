@@ -50,6 +50,7 @@
     flex-direction: column;
     padding-bottom: 20px;
     border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
   }
 
 
@@ -123,23 +124,6 @@
     font-weight: 300;
   }
 
-  .contactInfo.language .percent {
-    position: relative;
-    width: 100%;
-    height: 6px;
-    background-color: #081921;
-    display: block;
-    margin-top: 5px;
-  }
-
-  .contactInfo.language .percent div {
-    position: relative;
-    top: 0;
-    left: 0;
-    height: 100%;
-    background-color: #03a9f4;
-  }
-
   .container .right_Side {
     position: relative;
     background-color: #fff;
@@ -160,6 +144,7 @@
     letter-spacing: 1px;
     margin-bottom: 10px;
     font-family: "Space Grotesk", SansSerif;
+    font-weight: 800;
   }
 
   p {
@@ -170,56 +155,16 @@
     font-weight: 600;
   }
 
-  .about .box {
-    display: flex;
-    flex-direction: row;
-    margin: 20px 0;
-  }
-
-  .about .box .year_company {
-    min-width: 150px;
-  }
-
   .about .year_company h5 {
     text-transform: uppercase;
     color: #848c90;
     font-weight: 600;
   }
 
-  .about .box .text h4 {
-    text-transform: uppercase;
-    color: #2a7da2;
-    font-size: 16px;
-  }
-
-  .skills .box {
-    position: relative;
-    width: 100%;
-    display: grid;
-    grid-template-columns: 150px 1fr;
-    justify-content: center;
-    align-items: center;
-  }
-
-  .skills .box h4 {
-    text-transform: uppercase;
-    color: #848c90;
-    font-weight: 500;
-  }
-
-  .skills .box .percent {
-    position: relative;
-    width: 100%;
-    height: 10px;
-    background-color: #f0f0f0;
-  }
-
-  .skills .box .percent div {
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 100%;
-    background-color: #212121;
+  .about .case {
+    margin-top: 20px;
+    border-bottom: 1px solid #c6c6c6;
+    padding-bottom: 20px;
   }
 
   .interest ul {
@@ -252,19 +197,7 @@
   }
 
   @media (max-width: 600px) {
-    .about .box {
-      flex-direction: column;
-    }
-
-    .about .box .year_company {
-      margin-bottom: 5px;
-    }
-
     .interest ul {
-      grid-template-columns: repeat(1, 1fr);
-    }
-
-    .skills .box {
       grid-template-columns: repeat(1, 1fr);
     }
   }
@@ -272,6 +205,7 @@
   table {
     width: 100%;
     border-spacing: 0;
+    page-break-inside: avoid;
   }
 
   td {
@@ -280,34 +214,52 @@
     vertical-align: top;
     border-bottom: 1px solid #cacaca;
   }
+
+  .btn {
+    background-color: #007bff;
+    color: #fff;
+    text-transform: uppercase;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    cursor: pointer;
+    font-size: 16px;
+    position: fixed;
+    top: 20px;
+    right: 40px;
+    z-index: 999;
+  }
+
+  .btn:hover {
+    background-color: #006bdd;
+  }
+
+  .btn i {
+    margin-right: 5px;
+  }
 </style>
-
-
-
-
 
 <head>
   <meta charset="UTF-8">
   <meta name="viewport"
     content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css"
-    integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg=="
-    crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <link rel="stylesheet" type="text/css" href="style.css">
-  <link rel="stylesheet" type="text/css" href="css/data.css">
+  <script src="https://kit.fontawesome.com/bd8e655223.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
-  <div class="container">
+
+  <a href="#" class="btn" onclick="downloadPDF()"><i class="fa fa-download"></i> Download PDF</a>
+
+  <div id="pdfBody" class="container no-break">
     <div class="left_Side">
       <div class="profileText">
-        <br>
         <h2>Viktoriia Senkiv <br><span>C++ Developer</span> </h2>
       </div>
 
       <div class="contactInfo">
-        <h3 class="title">🪪 Contact Info</h3>
+        <h3 class="title">Contact Info</h3>
         <ul>
           <li>
             <span class="icon"><i class="fa fa-envelope" aria-hidden="true"></i></span>
@@ -326,7 +278,7 @@
         </ul>
       </div>
       <div class="contactInfo education">
-        <h3 class="title">📖 Education</h3>
+        <h3 class="title">Education</h3>
         <ul>
           <li>
             <b>MS in Computer Science (2020-2022)</b>
@@ -345,24 +297,29 @@
           </li>
         </ul>
       </div>
+
       <div class="contactInfo language">
-        <h3 class="title">💂 Languages</h3>
+        <h3 class="title">Cources</h3>
         <ul>
-          <li>
-            <span class="text">English (Upper intermediate)</span>
-        </ul>
-        <ul>
-          <li>
-            <span class=" text">Ukraine (Native)
-            </span>
-          </li>
+          <li>Introduction to Databases for Back-End Development, 9FYAGA7854JW, Coursera, 2023.</li>
+          <li>Basics of C++ Development, 2ZNHXUH6QEJF, Coursera, 2020</li>
+          <li>Basics of C++ Development, VF2FHPPJD9AZ, Coursera, 2020.</li>
         </ul>
       </div>
+
+      <div class="contactInfo language">
+        <h3 class="title">Languages</h3>
+        <ul>
+          <li>English (Upper intermediate)
+          <li>Ukraine (Native)</li>
+        </ul>
+      </div>
+
     </div>
     <div class="right_Side">
       <div class="about">
-        <h2 class="title2">🤓 Profile</h2>
-        <p>I am a Junior C++ Developer with more than 2 years of experience in the IT industry.
+        <h2 class="title2">👩🏻‍💼 Profile</h2>
+        <p>I am a Junior C++ Developer with more than 3 years of experience in the IT industry.
           I have a solid background in a number of technologies on Windows and Linux
           platforms. I have a considerable expertise in network technologies, particularly
           protocols and sockets.<br>
@@ -372,34 +329,64 @@
 
       <div class="about">
         <h2 class="title2">🚀 Experience</h2>
-        <div class="year_company">
-          <h5>2020 - Present</h5>
-          <h5>A US banking company</h5>
+        <div class="case">
+          <div class="year_company">
+            <h5>2023 - Present</h5>
+            <h5>A US banking company</h5>
+          </div>
+          <p>Engaged in developing an administrative API service tasked with overseeing customer onboarding, delivering
+            authentication services tailored for non-Java clients, and administering user policies and tenant mappings.
+            This project was built using Java and Spring Boot, with a focus on maintaining high-quality code through
+            extensive unit and end-to-end testing.
+            <br>
+            <b>Role:</b> Java Developer<br>
+          </p>
         </div>
-        <!-- Customer: A US banking company -->
-        <p>The challenge was to develop the application for a leading
-          international financial services provider. The customer approached our team for help
-          on improving accessibility and flexibility of the existing solution. The solution was
-          used for storing hundreds of statement templates and performing tax-related
-          calculations.</p>
-        <p><b>Team size:</b> 113 team members <br>
-          <b>Involvement duration:</b> 2 years and 8 months<br>
-          <b>Role:</b> Junior C++ Developer<br>
-        </p>
-        <br>
-        <p>
-          <b>Responsibilities:</b>
-        <ul>
-          <li>Understood the requirements.</li>
-          <li>Designed and developed new features.</li>
-          <li>Designed the UI components and covered them with unit tests.</li>
-          <li>Provided the system and application support.</li>
-          <li>Performed log analysis and troubleshot issues.</li>
-          <li>Designed and developed new features.</li>
-          <li>Enhanced the existing features mentioned by the customer.</li>
-          <li>Participated in status update and planning meetings.</li>
-        </ul>
-        </p>
+
+        <div class="case">
+          <div class="year_company">
+            <h5>2020 - Present</h5>
+            <h5>A US banking company</h5>
+          </div>
+          <p>This is big project with a lot of of teams on client and our side. The work has included a lot of
+            communication with international developers, resolving client issue in short time, great understanding with
+            existing code. <br>
+            The challenge was to develop the application for a leading
+            international financial services provider. The customer approached our team for help
+            on improving accessibility and flexibility of the existing solution. The solution was
+            used for storing hundreds of statement templates and performing tax-related
+            calculations.</p>
+          <p><b>Team size:</b> 113 team members <br>
+            <b>Involvement duration:</b> 3 years and 8 months<br>
+            <b>Role:</b> Junior C++ Developer<br>
+          </p>
+          <br>
+          <p>
+            <b>Responsibilities:</b>
+          <ul>
+            <li>Understood the requirements.</li>
+            <li>Designed and developed new features.</li>
+            <li>Designed the UI components and covered them with unit tests.</li>
+            <li>Provided the system and application support.</li>
+            <li>Performed log analysis and troubleshot issues.</li>
+            <li>Designed and developed new features.</li>
+            <li>Enhanced the existing features mentioned by the customer.</li>
+            <li>Participated in status update and planning meetings.</li>
+          </ul>
+          </p>
+        </div>
+
+        <div class="case">
+          <div class="year_company">
+            <h5>2022</h5>
+            <h5>Company interal project</h5>
+          </div>
+          <p>Successfully developed a service application capable of tracking Windows processes and transmitting
+            information through WinAPI named pipes to a user interface (UI). A key feature of this project was its
+            ability to write Python plugins and seamlessly integrate them into C++ code.
+          </p>
+        </div>
+
       </div>
 
       <div class="about skills">
@@ -408,7 +395,7 @@
           <tr>
             <td>Languages standards</td>
             <td>C, C++98, C++03,
-              C++11, C++14, C++17, C++20</td>
+              C++11, C++14, C++17, C++20, Java</td>
           </tr>
           <tr>
             <td>Compiler and build systems</td>
@@ -420,12 +407,12 @@
               Concurrency Runtime</td>
           </tr>
           <tr>
-            <td>Common libraries and interfaces</td>
-            <td>STL, Qt, Boost, OCI, OpenSSL, cUrl, PuTTY</td>
+            <td>Common libraries and frameworks</td>
+            <td>STL, Qt, Boost, OCI, OpenSSL, cUrl, PuTTY, Spring Boot, Swagger</td>
           </tr>
           <tr>
-            <td>Unit testing</td>
-            <td>Google Test, Google Mock</td>
+            <td>Testing</td>
+            <td>Google Test, Google Mock, JUnit, Soap UI</td>
           </tr>
           <tr>
             <td>Technologies</td>
@@ -441,20 +428,47 @@
           </tr>
           <tr>
             <td>Tools</td>
-            <td>GDB, VS Remote Debugger, GitHub, GitLab, SonarQube, Jenkins</td>
+            <td>GDB, VS Remote Debugger, GitHub, GitLab, SonarQube, Jenkins, Fiddler, WinSCP, Putty, Intelij Idea,
+              VisualStudio, Eclipse</td>
           </tr>
         </table>
       </div>
       <div class="about interest">
         <h2 class="title2">Interests</h2>
         <ul>
-          <li><i class="fa fa-book" aria-hidden="true"></i> Reading</li>
-          <li><i class="fa fa-gamepad" aria-hidden="true"></i> Gaming</li>
-          <li><i class="fa fa-cutlery" aria-hidden="true"></i> Cooking</li>
-          <li><i class="fa fa-microphone" aria-hidden="true"></i> Singing</li>
+          <li><i class="fa-solid fa-book" aria-hidden="true"></i> Reading</li>
+          <li><i class="fa-solid fa-person-hiking" aria-hidden="true"></i> Hiking</li>
+          <li><i class="fa-solid fa-microphone" aria-hidden="true"></i> Singing</li>
         </ul>
       </div>
     </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jspdf-html2canvas@latest/dist/jspdf-html2canvas.min.js"></script>
+
+    <script type="text/javascript">
+
+      function downloadPDF() {
+        let page = document.getElementById('pdfBody');
+        window.html2PDF(page, {
+          jsPDF: {
+            unit: 'px',
+            format: [850, 2000],
+          },
+          // html2canvas: {
+          //   width: 1000,
+          //   height: 2000
+          // },
+          imageType: 'image/jpeg',
+          success: function (pdf) {
+            pdf.save('Viktoriia_Senkiv_CV.pdf');
+          }
+        });
+
+      }
+    </script>
+
 </body>
 
 </html>
